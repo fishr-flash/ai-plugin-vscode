@@ -1,0 +1,31 @@
+{
+  "name": "ai-plugin-vscode",
+  "displayName": "AiRousePlugin",
+  "description": "Плагин для взаимодействия AI с VSCode",
+  "author": {
+    "email": "kassroman@gmail.com",
+    "name": "Roman R. Kassymov"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiRouse.open",
+        "title": "AiRouse: Open Panel"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0"
+  }
+}

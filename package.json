@@ -24,17 +24,17 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "aiRouseSidebar",
-          "title": "AiRouse",
+          "id": "aiRouse",
+          "title": "AI Rouse",
           "icon": "media/icon-app.svg"
         }
       ]
     },
     "views": {
-      "aiRouseSidebar": [
+      "aiRouse": [
         {
-          "id": "aiRouseView",
-          "name": "AI Панель"
+          "id": "aiRouseSidebar",
+          "name": "Explorer"
         }
       ]
     },
@@ -42,6 +42,18 @@
       {
         "command": "aiRouse.open",
         "title": "AiRouse: Open Panel"
+      }
+    ],
+    "languages": [
+      {
+        "id": "plaintext",
+        "aliases": [
+          "Plain Text"
+        ],
+        "extensions": [
+          ".txt"
+        ],
+        "configuration": "./language-configuration.json"
       }
     ]
   }

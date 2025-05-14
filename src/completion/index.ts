@@ -1,0 +1,1 @@
+export { registerAutocomplete } from "./registerAutocomplete";

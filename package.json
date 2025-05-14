@@ -11,14 +11,6 @@
     "vscode": "^1.85.0"
   },
   "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "aiRouse.open",
-        "title": "AiRouse: Open Panel"
-      }
-    ]
-  },
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
     "compile": "tsc -p ./",
@@ -27,5 +19,30 @@
   "devDependencies": {
     "@types/vscode": "^1.85.0",
     "typescript": "^5.0.0"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aiRouseSidebar",
+          "title": "AiRouse",
+          "icon": "media/icon-app.svg"
+        }
+      ]
+    },
+    "views": {
+      "aiRouseSidebar": [
+        {
+          "id": "aiRouseView",
+          "name": "AI Панель"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "aiRouse.open",
+        "title": "AiRouse: Open Panel"
+      }
+    ]
   }
 }

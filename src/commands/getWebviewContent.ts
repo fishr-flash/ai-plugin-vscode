@@ -6,9 +6,6 @@ export function getWebviewContent(
   webview: vscode.Webview,
   extensionUri: vscode.Uri
 ): string {
-  console.log("👀 getWebviewContent() вызывается");
-  // throw new Error("❌ getWebviewContent не должен был быть проигнорирован!");
-
   const distPath = vscode.Uri.joinPath(extensionUri, "dist", "webview");
   const indexPath = path.join(distPath.fsPath, "index.html");
 
@@ -20,6 +17,8 @@ export function getWebviewContent(
     const webviewUri = webview.asWebviewUri(filePath);
     return `${attr}="${webviewUri}"`;
   });
+
+  // /TODO: Добавить иконку во вкладку webview
 
   // CSP + nonce
   const nonce = getNonce();

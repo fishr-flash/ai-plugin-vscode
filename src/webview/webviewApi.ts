@@ -1,3 +1,4 @@
+// /TODO: Что это за файл, как с ним взаимоействовать?
 // webview/webviewApi.ts
 const vscode = acquireVsCodeApi();
 

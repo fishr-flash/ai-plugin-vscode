@@ -20,7 +20,7 @@
   },
   "include": [
     "./**/*",
-    "../../getWebviewContent.ts",
+    "../commands/getWebviewContent.ts",
     "../types/vscode.d.ts"
   ]
 }

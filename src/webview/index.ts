@@ -1,1 +1,1 @@
-export { getWebviewContent } from "../../getWebviewContent";
+export { getWebviewContent } from "../commands/getWebviewContent";

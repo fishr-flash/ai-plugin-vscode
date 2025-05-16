@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { getWebviewContent } from "../../getWebviewContent";
+import { getWebviewContent } from "./getWebviewContent";
 
 export function registerCommands(context: vscode.ExtensionContext) {
   const command = vscode.commands.registerCommand("aiRouse.open", () => {

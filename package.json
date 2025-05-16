@@ -12,11 +12,13 @@
   },
   "main": "./dist/extension.js",
   "scripts": {
-    "vscode:prepublish": "tsc -p ./",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "build:webview": "cd src/webview && npm install && npm run build",
+    "build:extension": "tsc -p tsconfig.backend.json",
+    "build": "npm run build:webview && npm run build:extension",
+    "watch": "tsc -watch -p tsconfig.backend.json"
   },
   "devDependencies": {
+    "@types/node": "^22.15.18",
     "@types/vscode": "^1.85.0",
     "typescript": "^5.0.0"
   },
@@ -42,18 +44,6 @@
       {
         "command": "aiRouse.open",
         "title": "AiRouse: Open Panel"
-      }
-    ],
-    "languages": [
-      {
-        "id": "plaintext",
-        "aliases": [
-          "Plain Text"
-        ],
-        "extensions": [
-          ".txt"
-        ],
-        "configuration": "./language-configuration.json"
       }
     ]
   }

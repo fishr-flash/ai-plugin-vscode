@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { getWebviewContent } from "../webview";
+import { getWebviewContent } from "../../getWebviewContent";
 
 export function registerCommands(context: vscode.ExtensionContext) {
   const command = vscode.commands.registerCommand("aiRouse.open", () => {
@@ -9,7 +9,10 @@ export function registerCommands(context: vscode.ExtensionContext) {
       vscode.ViewColumn.One,
       {
         enableScripts: true,
-        localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, "media")]
+        localResourceRoots: [
+          vscode.Uri.joinPath(context.extensionUri, "media"),
+          vscode.Uri.joinPath(context.extensionUri, "dist", "webview")
+        ]
       }
     );
 
